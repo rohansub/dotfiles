@@ -1,10 +1,11 @@
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 export PATH="$HOME/.cargo/bin:$PATH"
 
 
 # Aliases
-alias rm='rmtrash'
-alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME' 
+alias rm='trash'
+alias dotfiles='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME' 
 # Tmux
 alias t="tmux"
 alias ta="t a -t"
