@@ -10,8 +10,7 @@ Plug 'preservim/nerdcommenter'
 Plug 'tpope/vim-unimpaired'
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
-"Plug 'rafi/awesome-vim-colorschemes'
-Plug 'ayu-theme/ayu-vim' 
+Plug 'sonph/onehalf', { 'rtp': 'vim' }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'neoclide/coc.nvim', {'branch': 'release'} 
@@ -41,16 +40,20 @@ set number
 set splitright
 set backspace=indent,eol,start
 " Themes, Fonts
-set termguicolors  
-let ayucolor="dark" 
-colorscheme ayu
-
-let g:airline_theme='deus'
+colorscheme onehalfdark 
+let g:airline_theme='onehalfdark'
 let g:airline_powerline_fonts = 64
 let g:airline#extensions#branch#enabled=1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
+
+if exists('+termguicolors')
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+endif
+
 
 
 nmap <leader>gd <Plug>(coc-definition)

@@ -12,7 +12,7 @@ alias ta="t a -t"
 alias tls="t ls"
 alias tn="t new -t"
 alias tks="t kill-session -t"
-
+alias vim="/opt/homebrew/bin/vim"
 # Golang tools
 alias gobuild="go build ./..."
 alias gotest="go test ./..."
