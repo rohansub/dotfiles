@@ -77,9 +77,15 @@ nmap <leader>gs :G<CR>
 
 " FZF settings
 nnoremap <c-p> :GFiles --cached --others --exclude-standard<cr>
+"let g:fzf_action = {
+  "\ 'enter': 'open',
+  "\ 'ctrl-x': 'split',
+  "\ 'ctrl-v': 'vsplit' }
+
 let g:fzf_action = {
-  \ 'enter': 'open',
-  \ 'ctrl-x': 'split',
+  \ 'enter': 'e',
+  \ 'ctrl-t': 'tab drop',
+  \ 'ctrl-s': 'split',
   \ 'ctrl-v': 'vsplit' }
 
 
